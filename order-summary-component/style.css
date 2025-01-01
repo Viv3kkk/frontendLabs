@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* 
+=======================================
+:root - Define CSS Variables for reuse
+=======================================
+*/
+:root {
+  --clr-primary-Pale-blue: #e0e8ff;
+  --clr-primary-Bright-blue: #3829e0;
+
+  --clr-neutral-Very-pale-blue: #f5f7ff;
+  --clr-neutral-Desaturated-blue: #7280a7;
+  --clr-neutral-Dark-blue: #1f2f56;
+
+  --ff: "Red Hat Display", sans-serif;
+  --fs-body: 1rem;
+  --fs-heading: 1.5rem;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+/* 
+==========================
+* Reset default styles
+==========================
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  display: block;
+  font: inherit;
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* 
+===========================
+Body styling
+===========================
+*/
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-Desaturated-blue);
+  background: url(images/pattern-background-mobile.svg)
+    var(--clr-primary-Pale-blue);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; /* Ensure the image covers the entire area */
+}
+
+/* 
+===========================
+Typography styles
+===========================
+*/
+.title {
+  color: var(--clr-neutral-Dark-blue);
+  font-weight: var(--fw-900);
+  font-size: var(--fs-heading);
+}
+
+.annual-desc,
+.title {
+  color: var(--clr-neutral-Dark-blue);
+  font-weight: var(--fw-900);
+}
+
+.annual-btn {
+  font-weight: 700;
+  color: var(--clr-primary-Bright-blue);
+}
+
+.annual-btn:hover {
+  text-decoration: none;
+  color: var(--clr-neutral-Desaturated-blue);
+}
+
+/* 
+===========================
+Button components
+===========================
+*/
+.payment-button {
+  color: var(--clr-neutral-Very-pale-blue);
+  padding: 0.8rem;
+  background: var(--clr-primary-Bright-blue);
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 10px 15px hsla(224, 23%, 55%, 0.5);
+  transition: background 0.3s ease;
+}
+
+.payment-button:hover {
+  background: var(--clr-neutral-Desaturated-blue);
+}
+
+.cancel-button {
+  font-weight: 700;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--clr-neutral-Desaturated-blue);
+}
+
+.cancel-button:hover {
+  color: var(--clr-primary-Bright-blue);
+}
+
+/* 
+===========================
+General layout styles
+===========================
+*/
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100dvh; /* Use dynamic viewport height */
+}
+
+/* 
+===========================
+Card styles
+===========================
+*/
+.card-container {
+  max-width: 25em;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 10px #e0e8ff;
+}
+
+.illustration-img {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.card-content {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.card-content > * + * {
+  margin-top: 1.75rem;
+}
+
+.card-pricing,
+.annual-pricing {
+  display: flex;
+  align-items: center;
+}
+
+.card-pricing {
+  background: rgba(128, 128, 128, 0.046);
+  padding: 1em;
+  border-radius: 0.7em;
+  justify-content: space-between;
+}
+
+.annual-pricing {
+  gap: 1rem;
+}
+
+/* 
+===========================
+Media Queries
+===========================
+*/
+@media (min-width: 450px) {
+  body {
+    background: url(images/pattern-background-desktop.svg),
+      var(--clr-primary-Pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
