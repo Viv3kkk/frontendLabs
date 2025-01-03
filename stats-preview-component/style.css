@@ -1,0 +1,154 @@
+/* font-family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
+/* root */
+:root {
+    --clr-primary-Very-dark-blue-main-bg: #090b1a;
+    --clr-primary-Dark-desaturated-blue-card-bg: #1b1938;
+    --clr-primary-Soft-violet-accent: #aa5cdb;
+    
+    --clr-neutral-White-main-headings: #ffffff;
+    --clr-neutral-transparent-white-main-paragraph: #ffffffbf;
+    --clr-neutral-transparent-white-stat-headings: #ffffff99;
+
+    --ff-body: "Lexend Deca", sans-serif;
+    --ff-heading: "Inter", sans-serif;
+    --fs-body: .95rem;
+    --fs-heading: 2rem;
+    --fs-stat-number: 1.5rem;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-transparent-white-main-paragraph);
+    background: var(--clr-primary-Very-dark-blue-main-bg);
+}
+
+/* helper classes */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+/* text styles / typography */
+.title, .stat-number {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-700);
+    font-size: var(--fs-heading);
+    color: var(--clr-neutral-White-main-headings);
+} 
+
+.title span {
+    color: var(--clr-primary-Soft-violet-accent);
+}
+
+.stat-number {
+    font-size: var(--fs-stat-number);
+}
+
+.stat-desc {
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+
+/* layout */
+.wrapper {
+    justify-content: center;
+    min-height: 100dvh;
+}
+
+.card-container {
+    max-width: 70em;
+    border-radius: .5rem;
+    overflow-y: hidden;
+    background: var(--clr-primary-Dark-desaturated-blue-card-bg);
+}
+
+.card-container * {
+    flex-basis: 50%;
+}
+
+
+/* general styles */
+.card-image {
+    position: relative;
+}
+
+.card-image::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: hsla(277, 90%, 23%, 0.75);
+    position: absolute;
+    inset: 0;
+}
+
+.card-content {
+    padding: 4rem;
+}
+
+.card-content > * + * {
+    margin-top: 2rem;
+}
+
+.stats {
+    gap: 1rem;
+    margin-top: 3.75rem;
+}
+
+
+/* media query */
+@media (max-width: 800px) {
+    .card-container {
+        width: 90%;
+        margin: 4rem 0;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --fs-heading: 1.75rem
+    }
+
+    .card-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .stats {
+        gap: 2rem;
+    }
+} 
