@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/* 
+=======================================
+:root - Define CSS Variables for reuse
+=======================================
+*/
+:root {
+    --clr-primary-Bright-orange: #e38826;
+    --clr-primary-Dark-cyan: #006970;
+    --clr-primary-Very-dark-cyan: #004241;
+
+    --clr-neutral-Transparent-white-paragraphs: #ffffffbf;
+    --clr-neutral-Very-light-gray-bg-h: #f2f2f2;
+
+    --ff-body: 'Lexend Deca', sans-serif;
+    --ff-heading: 'Big Shoulders Display', sans-serif;
+    --fs-body: .95rem;
+    --fs-heading: 3rem;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* 
+==========================
+* Reset default styles
+==========================
+*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    line-height: 1.1;
+    font-family: var(--ff-heading);
+}
+
+/* 
+===========================
+Body styling
+===========================
+*/
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-Transparent-white-paragraphs);
+    line-height: 1.6;
+}
+
+/* 
+===========================
+Helper classes
+===========================
+*/
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* 
+===========================
+Text styles
+===========================
+*/
+.title {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    color: var(--clr-neutral-Very-light-gray-bg-h);
+}
+
+/* 
+===========================
+Layout styles
+===========================
+*/
+.wrapper {
+    justify-content: center;
+    min-height: 100dvh;
+}
+
+/* 
+===========================
+General styles
+===========================
+*/
+.card-container {
+    width: 65em;
+    border-radius: .5rem;
+    margin: 4rem 1rem;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+}
+
+.card-container > * {
+    flex-basis: 100%;
+    flex: 1 0 18rem;
+}
+
+.card-container > *:nth-child(1) {
+    background-color: var(--clr-primary-Bright-orange);
+}
+
+.card-container > *:nth-child(3) {
+    background-color: var(--clr-primary-Very-dark-cyan);
+}
+
+.card {
+    padding: 3.5rem;
+    background-color: var(--clr-primary-Dark-cyan);
+}
+
+.card * + * {
+    margin-top: 2rem;
+}
+
+/* 
+===========================
+Button styles
+===========================
+*/
+.card-button {
+    font: inherit;
+    color: var(--clr-primary-Dark-cyan);
+    padding: .6rem 2rem;
+    border-radius: 999px;
+    border: none;
+    margin-top: 5rem;
+    background: var(--clr-neutral-Very-light-gray-bg-h);
+    border: 2px solid var(--clr-neutral-Very-light-gray-bg-h);
+    transition: background .3s ease;
+}
+
+.card-button:hover {
+    color: var(--clr-neutral-Very-light-gray-bg-h);
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid var(--clr-neutral-Very-light-gray-bg-h);
+}
