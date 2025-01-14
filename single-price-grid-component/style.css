@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Root Variables */
+:root {
+  --clr-primary-cyan: #2ab2af;
+  --clr-primary-bright-yellow: #c0df34;
+
+  --clr-neutral-light-gray: #e5eff5;
+  --clr-neutral-grayish-blue: #98a6bd;
+
+  --ff: "Karla", sans-serif;
+  --fs-body: 1rem;
+  --fs-title: 1.25rem;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--clr-neutral-grayish-blue);
+  background: var(--clr-neutral-light-gray);
+}
+
+/* Typography */
+.title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-cyan);
+}
+
+.subtitle {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-bright-yellow);
+}
+
+.price-row-bottom {
+  color: var(--clr-neutral-light-gray);
+}
+
+.price-col--title {
+  font-size: 1.2rem;
+  font-weight: var(--fw-700);
+}
+
+.price-col--amount {
+  font-size: 1.75rem;
+  font-weight: var(--fw-700);
+}
+
+.price-col--amount span {
+  font-size: 0.9rem;
+  font-weight: var(--fw-400);
+  opacity: 0.7;
+}
+
+.why-us .price-col--title {
+  margin-bottom: 1rem;
+}
+
+ul li {
+  font-size: 14px;
+}
+
+/* Layout Styles */
+.price-col,
+.price-row-top {
+  padding: 1.5rem;
+}
+
+.price-row-top {
+  padding-bottom: 2rem;
+}
+
+.price-row-top * + * {
+  margin-top: 1rem;
+}
+
+.subscription * + * {
+  margin-top: 0.3rem;
+}
+
+.price-container {
+  margin: 4rem 1.75rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow-y: hidden;
+}
+
+/* General Styles */
+.price-row-bottom > *:nth-child(1) {
+  background: var(--clr-primary-cyan);
+}
+
+.price-row-bottom > *:nth-child(2) {
+  background: hsla(179, 62%, 43%, 0.8);
+}
+
+.signup-btn {
+  display: block;
+  width: 100%;
+  color: var(--clr-neutral-light-gray);
+  font-weight: var(--fw-700);
+  padding: 0.7rem;
+  margin-top: 2rem;
+  background: var(--clr-primary-bright-yellow);
+  border: none;
+  border-radius: 0.3rem;
+}
+
+/* Media Query */
+@media (min-width: 650px) {
+  :root {
+    --fs-title: 1.5rem;
+  }
+
+  .price-row-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-col {
+    place-content: center;
+  }
+
+  .price-col,
+  .price-row-top {
+    padding: 2rem;
+  }
+
+  .price-row-top {
+    padding: 3rem 2rem;
+  }
+
+  .wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+
+  .price-container {
+    max-width: 650px;
+  }
+}
