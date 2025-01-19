@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* root */
+:root {
+    --clr-Violet: #674baf;
+    --clr-Soft-Magenta: #e882e8;
+    --clr-white: #ffffff;
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open sans', sans-serif;
+    --fs-heading: 2.5rem;
+    --fs-body: 1rem;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+/* reset */ 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    /* margin-inline: auto; */
+}
+
+button {
+    font: inherit;
+}
+
+body { 
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-body);
+    color: var(--clr-white);
+    background: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--clr-Violet);
+}
+
+/* text styles */
+.title {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-600);
+}
+
+
+/* components */
+.hero-button  {
+    color: var(--clr-Violet);
+    font-weight: var(--fw-600);
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.4);
+    background: var(--clr-white);
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease;
+}
+
+.hero-button:hover {
+    color: var(--clr-white);
+    background: var(--clr-Soft-Magenta);
+}
+
+.social-links ion-icon {
+    display: inline-block;
+    padding: 0.5rem ;
+    border: 0.5px solid var(--clr-white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease;
+}
+
+.social-links {
+    text-align: end;
+}
+
+.social-links ion-icon:hover {
+    color: var(--clr-Soft-Magenta);
+    border-color: var(--clr-Soft-Magenta);
+}
+
+
+.social-links > *:nth-child(2) {
+    margin: 0 .5rem;
+}
+
+
+/* layout */ 
+.hero-container {
+    width: 90%;
+    margin-inline: auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 0 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-section > * {
+    flex-basis: 50%;
+    flex: 1 0 20rem;
+}
+
+
+/* general styles */
+.logo {
+    width: 15rem;
+}
+
+.hero-content {
+    padding-top: 4rem;
+}
+
+.hero-content > * + * {
+    margin-top: 1.5rem;
+}
+
+
+/* media query */
+@media (max-width: 1200px) {
+    .hero-image {
+        width: 20em;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --fs-heading: 1.75rem;
+    }
+
+    body {
+        background: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        background-color: var(--clr-Violet);
+    }
+
+    .logo {
+        width: 10em;
+    }
+
+    .hero-image {
+        width: auto;
+    }
+
+    .hero-section {
+        gap: 0;
+    }
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
+    .hero-content, .social-links {
+        text-align: center;
+    }
+
+    .hero-button {
+        display: block;
+        width: 70%;
+        margin-inline: auto;
+    }
+}
