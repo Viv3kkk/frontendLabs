@@ -1,0 +1,143 @@
+:root {
+  /* Colors */
+  --clr-primary-red: #ea5353;
+  --clr-primary-cyan: #45d3d3;
+  --clr-primary-orange: #fcaf4a;
+  --clr-primary-blue: #549ef2;
+
+  --clr-neutral-very-dark-blue: #4c4e61;
+  --clr-neutral-grayish-blue: #a3a5ae;
+  --clr-neutral-very-light-gray: #fafafa;
+
+  /* Typography */
+  --ff: "Poppins", sans-serif;
+  --fs-body: 0.975rem;
+  --fs-heading: 1.5rem;
+  --fs-card-heading: 1.25rem;
+
+  /* Font Weights */
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+@media screen and (min-width: 850px) {
+  :root {
+    --fs-heading: 1.75rem;
+  }
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-grayish-blue);
+}
+
+/* Title Styles */
+.title,
+.subtitle,
+.card-title {
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-400);
+  color: var(--clr-neutral-very-dark-blue);
+}
+
+.subtitle,
+.card-title {
+  font-weight: var(--fw-600);
+}
+
+.card-title {
+  font-size: var(--fs-card-heading);
+  margin-bottom: 1rem;
+}
+
+.desc {
+  margin-top: 1.5rem;
+}
+
+.feature-headings {
+  text-align: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.feature-container {
+  width: 80%;
+  margin-inline: auto;
+  padding: 4rem 0;
+}
+
+.feature-cards {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-cards > * {
+  flex-basis: 100%;
+  flex: 1 0 15rem;
+}
+
+.middle-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Components */
+.card {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  border-top: 5px solid var(--clr-primary-cyan);
+  box-shadow: 0 5px 10px hwb(229 64% 32% / 0.4);
+}
+
+.card-red {
+  border-color: var(--clr-primary-red);
+}
+
+.card-orange {
+  border-color: var(--clr-primary-orange);
+}
+
+.card-blue {
+  border-color: var(--clr-primary-blue);
+}
+
+.card-img {
+  align-self: flex-end;
+  margin-top: 2rem;
+}
