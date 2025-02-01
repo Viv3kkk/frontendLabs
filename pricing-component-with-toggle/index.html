@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Component With Toggle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <h1 class="title">Our Pricing</h1>
+        <div class="pricing">
+          <p>Annually</p>
+          <label class="switch">
+            <input type="checkbox" id="toggle" />
+            <span class="slider"></span>
+          </label>
+          <p>Monthly</p>
+        </div>
+        <div class="pricing-main">
+          <div class="pricing-box">
+            <p class="box-title">Basic</p>
+            <p class="price-annually">
+              &dollar; <span class="price">199.99</span>
+            </p>
+            <p class="price-monthly">
+              &dollar; <span class="price">19.99</span>
+            </p>
+            <ul>
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div class="pricing-box featured">
+            <p class="box-title">Professional</p>
+            <p class="price-annually">
+              &dollar; <span class="price">249.99</span>
+            </p>
+            <p class="price-monthly">
+              &dollar; <span class="price">24.99</span>
+            </p>
+            <ul>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div class="pricing-box">
+            <p class="box-title">Enterprise</p>
+            <p class="price-annually">
+              &dollar; <span class="price">399.99</span>
+            </p>
+            <p class="price-monthly">
+              &dollar; <span class="price">39.99</span>
+            </p>
+            <ul>
+              <li>2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
