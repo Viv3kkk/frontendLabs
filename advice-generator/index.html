@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate random advice with the Advice Generator."
+    />
+    <title>Advice Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card" id="card">
+        <!-- Advice ID Section -->
+        <p class="title" aria-label="Advice ID">
+          Advice #<span id="adviceId">117</span>
+        </p>
+
+        <!-- Advice Text Section -->
+        <blockquote class="advice" id="adviceText" aria-label="Advice Text">
+          <!-- Advice text will be dynamically inserted here -->
+        </blockquote>
+
+        <!-- Divider Image (Responsive) -->
+        <picture>
+          <source
+            media="(max-width: 425px)"
+            srcset="./images/pattern-divider-mobile.svg"
+          />
+          <img
+            src="./images/pattern-divider-desktop.svg"
+            class="divider"
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+          />
+        </picture>
+
+        <!-- Generate New Advice Button -->
+        <button id="btn" class="btn" aria-label="Generate new advice">
+          <img src="./images/icon-dice.svg" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </main>
+
+    <!-- Script for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>
