@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Manrope", sans-serif;
+  background: hsl(217, 19%, 24%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card Container */
+.card {
+  background: hsl(216, 100%, 50%);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 13px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding-bottom: 14px;
+}
+
+/* Advice Text Styling */
+.advice {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+  margin-bottom: 20px;
+}
+
+/* Divider Image Styling */
+.divider {
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  position: absolute;
+  left: 50%;
+  bottom: -31px;
+  transform: translateX(-50%);
+  background: hsl(150, 100%, 66%);
+  padding: 15px 17px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: hsl(150, 100%, 70%);
+  box-shadow: 0 0 20px hsl(150, 100%, 66%);
+}
+
+.btn img {
+  width: 24px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 425px) {
+  .card {
+    margin: 0 12px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .advice {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 14px;
+  }
+}
